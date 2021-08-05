@@ -53,12 +53,12 @@ public class CommonResponse<T> implements Serializable {
         return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), ResponseCodeEnum.SUCCESS.getMsg(), data);
     }
 
-    public static <T> CommonResponse<T> successMsg(String msg) {
-        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), msg);
+    public static <T> CommonResponse<T> successMsg(String message) {
+        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), message);
     }
 
-    public static <T> CommonResponse<T> success(String msg, T data) {
-        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), msg, data);
+    public static <T> CommonResponse<T> success(String message, T data) {
+        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), message, data);
     }
 
     public static <T> CommonResponse<T> fail() {
@@ -69,12 +69,16 @@ public class CommonResponse<T> implements Serializable {
         return new CommonResponse<>(ResponseCodeEnum.ERROR.getCode(), errorMessage);
     }
 
+    public static <T> CommonResponse<T> fail(int errorCode, String errorMessage) {
+        return new CommonResponse<>(errorCode, errorMessage);
+    }
+
     public static <T> CommonResponse<T> fail(BaseCommonError commonError) {
         return new CommonResponse<>(commonError.getErrorCode(), commonError.getErrorMsg());
     }
 
-    public static <T> CommonResponse<T> fail(int errorCode, String errorMessage) {
-        return new CommonResponse<>(errorCode, errorMessage);
+    public static <T> CommonResponse<T> fail(BaseCommonError commonError, String errorMessage) {
+        return new CommonResponse<>(commonError.getErrorCode(), errorMessage);
     }
 
     public Integer getCode() {
