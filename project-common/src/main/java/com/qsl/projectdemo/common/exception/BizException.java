@@ -9,7 +9,7 @@ import com.qsl.projectdemo.common.core.BaseCommonError;
  */
 public class BizException extends RuntimeException {
 
-    private static final long serialVersionUID = 4564124491192825748L;
+    private static final long serialVersionUID = 1L;
 
     private Integer code;
 

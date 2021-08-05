@@ -30,10 +30,6 @@ public class CommonResponse<T> implements Serializable {
      */
     private T data;
 
-    /**
-     * 空参构造函数
-     * 注：Jackson反序列化需要无参构造函数
-     */
     public CommonResponse() {
     }
 
