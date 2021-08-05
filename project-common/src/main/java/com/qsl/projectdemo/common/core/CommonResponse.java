@@ -31,26 +31,18 @@ public class CommonResponse<T> implements Serializable {
     private T data;
 
     public CommonResponse() {
+
     }
 
-    private CommonResponse(int code) {
+    private CommonResponse(int code, String msg) {
         this.code = code;
-    }
-
-    private CommonResponse(int code, T data) {
-        this.code = code;
-        this.data = data;
+        this.msg = msg;
     }
 
     private CommonResponse(int code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
-    }
-
-    private CommonResponse(int code, String msg) {
-        this.code = code;
-        this.msg = msg;
     }
 
     public static <T> CommonResponse<T> success() {
