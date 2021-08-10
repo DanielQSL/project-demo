@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @author DanielQSL
  */
 @MapperScan("com.qsl.projectdemo.dao.mapper")
-@Configuration
+//@Configuration
 public class MybatisPlusConfig {
 
     /**
