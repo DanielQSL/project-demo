@@ -1,7 +1,6 @@
 package com.qsl.projectdemo.common.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
@@ -31,18 +30,16 @@ public class JsonUtil {
     private static final String DATETIME_STANDARD_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     static {
-        // 对象的所有字段全部列入
-        OBJECT_MAPPER.setSerializationInclusion(JsonInclude.Include.ALWAYS);
-        // 取消默认转换timestamps形式
-        OBJECT_MAPPER.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
         // 所有的日期格式都统一为以下的样式，即yyyy-MM-dd HH:mm:ss
         OBJECT_MAPPER.setDateFormat(new SimpleDateFormat(DATETIME_STANDARD_FORMAT));
-        // 忽略在json字符串中存在，但是在java对象中不存在对应属性的情况。防止错误
-        OBJECT_MAPPER.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        // 忽略空Bean转json的错误
+        // 对象的所有字段全部列入。NON_NULL：不返回 null 值字段
+        OBJECT_MAPPER.setSerializationInclusion(JsonInclude.Include.ALWAYS);
+        // 允许序列化空的POJO类(否则会抛出异常)
         OBJECT_MAPPER.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        // 反序列化可以解析JSON串里包含了数字类型的属性值为NaN
-        OBJECT_MAPPER.configure(JsonParser.Feature.ALLOW_NON_NUMERIC_NUMBERS, true);
+        // 取消java.util.Date, Calendar默认转换timestamps形式
+        OBJECT_MAPPER.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        // 在遇到未知属性的时候不抛出异常。忽略在json字符串中存在，但是在java对象中不存在对应属性的情况。
+        OBJECT_MAPPER.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
     private JsonUtil() {
