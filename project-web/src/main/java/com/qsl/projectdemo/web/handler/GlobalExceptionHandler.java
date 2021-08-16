@@ -2,7 +2,7 @@ package com.qsl.projectdemo.web.handler;
 
 import com.qsl.projectdemo.common.core.CommonResponse;
 import com.qsl.projectdemo.common.enums.ResponseCodeEnum;
-import com.qsl.projectdemo.common.exception.BizException;
+import com.qsl.projectdemo.common.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
@@ -82,8 +82,8 @@ public class GlobalExceptionHandler {
      * @return 响应结果
      */
     @ResponseStatus(HttpStatus.OK)
-    @ExceptionHandler(value = BizException.class)
-    public CommonResponse bizExceptionHandler(HttpServletRequest request, final BizException ex) {
+    @ExceptionHandler(value = BusinessException.class)
+    public CommonResponse bizExceptionHandler(HttpServletRequest request, final BusinessException ex) {
         log.warn("{} 业务异常", request.getRequestURI(), ex);
         return CommonResponse.fail(ex.getCode(), ex.getMessage());
     }
