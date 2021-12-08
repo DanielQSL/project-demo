@@ -1,6 +1,6 @@
 package com.qsl.projectdemo.common.exception;
 
-import com.qsl.projectdemo.common.core.BaseCommonError;
+import com.qsl.projectdemo.common.model.BaseCommonError;
 
 /**
  * 自定义业务异常

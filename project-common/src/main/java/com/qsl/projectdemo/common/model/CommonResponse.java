@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.common.core;
+package com.qsl.projectdemo.common.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.qsl.projectdemo.common.enums.ResponseCodeEnum;

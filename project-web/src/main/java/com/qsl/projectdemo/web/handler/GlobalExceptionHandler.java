@@ -1,6 +1,6 @@
 package com.qsl.projectdemo.web.handler;
 
-import com.qsl.projectdemo.common.core.CommonResponse;
+import com.qsl.projectdemo.common.model.CommonResponse;
 import com.qsl.projectdemo.common.enums.ResponseCodeEnum;
 import com.qsl.projectdemo.common.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;

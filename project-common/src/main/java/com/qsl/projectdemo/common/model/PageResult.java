@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.common.core;
+package com.qsl.projectdemo.common.model;
 
 import java.io.Serializable;
 import java.util.List;

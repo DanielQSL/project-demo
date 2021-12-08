@@ -1,6 +1,6 @@
 package com.qsl.projectdemo.common.enums;
 
-import com.qsl.projectdemo.common.core.BaseCommonError;
+import com.qsl.projectdemo.common.model.BaseCommonError;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

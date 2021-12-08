@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.common.core;
+package com.qsl.projectdemo.common.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

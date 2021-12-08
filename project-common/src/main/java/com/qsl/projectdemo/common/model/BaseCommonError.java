@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.common.core;
+package com.qsl.projectdemo.common.model;
 
 /**
  * 通用错误接口
