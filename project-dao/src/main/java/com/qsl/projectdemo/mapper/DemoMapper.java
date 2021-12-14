@@ -1,7 +1,7 @@
-package com.qsl.projectdemo.dao.mapper;
+package com.qsl.projectdemo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.qsl.projectdemo.dao.entity.DemoEntity;
+import com.qsl.projectdemo.entity.DemoDO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @author DanielQSL
  */
 @Mapper
-public interface DemoMapper extends BaseMapper<DemoEntity> {
+public interface DemoMapper extends BaseMapper<DemoDO> {
 
 }

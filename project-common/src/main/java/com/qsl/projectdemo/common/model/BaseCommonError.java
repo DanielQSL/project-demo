@@ -15,9 +15,9 @@ public interface BaseCommonError {
     int getErrorCode();
 
     /**
-     * 获取错误描述
+     * 获取错误描述信息
      *
-     * @return 错误描述
+     * @return 错误描述信息
      */
     String getErrorMsg();
 

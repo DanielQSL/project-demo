@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.dao.config;
+package com.qsl.projectdemo.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author DanielQSL
  */
-@MapperScan("com.qsl.projectdemo.dao.mapper")
-//@Configuration
+@MapperScan("com.qsl.projectdemo.mapper")
+@Configuration
 public class MybatisPlusConfig {
 
     /**

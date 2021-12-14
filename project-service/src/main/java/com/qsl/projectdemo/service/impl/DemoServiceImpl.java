@@ -1,6 +1,8 @@
 package com.qsl.projectdemo.service.impl;
 
+import com.qsl.projectdemo.dao.DemoDAO;
 import com.qsl.projectdemo.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,5 +12,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class DemoServiceImpl implements DemoService {
+
+    @Autowired
+    private DemoDAO demoDAO;
 
 }

@@ -21,7 +21,7 @@ public class CommonResponse<T> implements Serializable {
     private Integer code;
 
     /**
-     * 错误描述
+     * 错误描述信息
      */
     private String msg;
 
