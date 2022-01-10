@@ -79,4 +79,15 @@ public class RpcResponse<T, ErrT> implements Serializable {
         this.errT = errT;
     }
 
+    @Override
+    public String toString() {
+        return "RpcResponse{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", detailMsg='" + detailMsg + '\'' +
+                ", data=" + data +
+                ", errT=" + errT +
+                '}';
+    }
+
 }

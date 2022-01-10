@@ -13,6 +13,8 @@ server:
 spring:
   application:
     name: project-demo
+  profiles:
+    active: dev
 
 logging:
   file:

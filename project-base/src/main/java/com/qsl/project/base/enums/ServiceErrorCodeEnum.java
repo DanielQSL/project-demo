@@ -3,7 +3,7 @@ package com.qsl.project.base.enums;
 import com.qsl.project.base.model.BaseCommonError;
 
 /**
- * 业务异常错误码
+ * 业务异常错误码模板
  * <p>
  * 一共 9 位，分成三段
  *

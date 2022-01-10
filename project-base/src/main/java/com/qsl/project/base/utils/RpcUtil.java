@@ -1,5 +1,6 @@
 package com.qsl.project.base.utils;
 
+import com.qsl.project.base.enums.ResponseCodeEnum;
 import com.qsl.project.base.exception.RpcException;
 import com.qsl.project.base.model.RpcResponse;
 
@@ -10,12 +11,11 @@ import com.qsl.project.base.model.RpcResponse;
  */
 public class RpcUtil {
 
-    private final static Integer SUCCESS_CODE = 0;
-    private final static String SUCCESS_MESSAGE = "success";
+    private final static Integer SUCCESS_CODE = ResponseCodeEnum.SUCCESS.getErrorCode();
+    private final static String SUCCESS_MESSAGE = ResponseCodeEnum.SUCCESS.getErrorMsg();
 
-    private final static Integer FAILED_CODE = -1;
-    private final static String FAILED_MESSAGE = "failed";
-    private final static Integer RETURN_NULL_CODE = 1001;
+    private final static Integer ERROR_CODE = ResponseCodeEnum.ERROR.getErrorCode();
+    private final static String ERROR_MESSAGE = ResponseCodeEnum.ERROR.getErrorMsg();
 
     public static <T, E> RpcResponse<T, E> ok(T data) {
         RpcResponse<T, E> rpcResponse = new RpcResponse<>();
@@ -65,7 +65,7 @@ public class RpcUtil {
             throw new RpcException(rpcResponse.getCode(), rpcResponse.getMsg());
         }
         if (null == rpcResponse.getData()) {
-            throw new RpcException(RETURN_NULL_CODE, "RPC return entity is null");
+            throw new RpcException(ResponseCodeEnum.RPC_RETURN_NULL.getErrorCode(), ResponseCodeEnum.RPC_RETURN_NULL.getErrorMsg());
         }
         return rpcResponse.getData();
     }
@@ -74,7 +74,7 @@ public class RpcUtil {
         if (e instanceof RpcException) {
             return error((RpcException) e, null);
         } else {
-            return error(FAILED_CODE, FAILED_MESSAGE, null);
+            return error(ERROR_CODE, ERROR_MESSAGE, null);
         }
     }
 

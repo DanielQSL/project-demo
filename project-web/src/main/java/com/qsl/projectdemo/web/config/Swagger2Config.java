@@ -17,12 +17,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  *
  * @author DanielQSL
  */
-@Profile({"dev", "test"})
+@Profile({"dev", "qa"})
 @EnableSwagger2
 @Configuration
 public class Swagger2Config {
 
-    private static final String BASE_PACKAGE = "com.qsl.project.web.controller";
+    private static final String BASE_PACKAGE = "com.qsl.projectdemo.web.controller";
 
     /**
      * swagger2的配置文件
@@ -49,9 +49,9 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("XXX项目后端api接口文档")
+                .title("模板项目后端api接口文档")
                 //描述
-                .description("欢迎访问XXX项目后端接口文档，以下是各功能模块接口的详细信息")
+                .description("欢迎访问模板项目后端接口文档，以下是各功能模块接口的详细信息")
                 //联系人
                 .contact(new Contact("DanielQSL", "", "DanielQSL@126.com"))
                 //版本号
