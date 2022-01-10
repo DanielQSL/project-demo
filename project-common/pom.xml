@@ -12,6 +12,11 @@
     <artifactId>project-common</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.qsl.project</groupId>
+            <artifactId>project-base</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>

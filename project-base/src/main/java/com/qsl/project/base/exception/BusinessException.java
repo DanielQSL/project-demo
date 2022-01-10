@@ -1,6 +1,6 @@
-package com.qsl.projectdemo.common.exception;
+package com.qsl.project.base.exception;
 
-import com.qsl.projectdemo.common.model.BaseCommonError;
+import com.qsl.project.base.model.BaseCommonError;
 
 /**
  * 自定义业务异常
@@ -24,6 +24,14 @@ public class BusinessException extends RuntimeException {
     public BusinessException(Integer code, String message) {
         super(message);
         this.setCode(code);
+    }
+
+    public BusinessException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public BusinessException(Throwable cause) {
+        super(cause);
     }
 
     public BusinessException(BaseCommonError commonError) {

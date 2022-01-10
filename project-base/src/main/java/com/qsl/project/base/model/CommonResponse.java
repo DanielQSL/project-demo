@@ -1,16 +1,14 @@
-package com.qsl.projectdemo.common.model;
+package com.qsl.project.base.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.qsl.projectdemo.common.enums.ResponseCodeEnum;
+import com.qsl.project.base.enums.ResponseCodeEnum;
 
 import java.io.Serializable;
 
 /**
- * 通用返回
+ * Web通用响应处理对象
  *
  * @author DanielQSL
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CommonResponse<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -21,7 +19,7 @@ public class CommonResponse<T> implements Serializable {
     private Integer code;
 
     /**
-     * 错误描述信息
+     * 错误描述
      */
     private String msg;
 

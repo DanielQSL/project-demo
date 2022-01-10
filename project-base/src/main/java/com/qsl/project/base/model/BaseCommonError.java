@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.common.model;
+package com.qsl.project.base.model;
 
 /**
  * 通用错误接口
@@ -15,9 +15,9 @@ public interface BaseCommonError {
     int getErrorCode();
 
     /**
-     * 获取错误描述信息
+     * 获取错误描述
      *
-     * @return 错误描述信息
+     * @return 错误描述
      */
     String getErrorMsg();
 

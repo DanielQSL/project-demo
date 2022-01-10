@@ -1,8 +1,8 @@
 package com.qsl.projectdemo.web.handler;
 
-import com.qsl.projectdemo.common.model.CommonResponse;
-import com.qsl.projectdemo.common.enums.ResponseCodeEnum;
-import com.qsl.projectdemo.common.exception.BusinessException;
+import com.qsl.project.base.enums.ResponseCodeEnum;
+import com.qsl.project.base.exception.BusinessException;
+import com.qsl.project.base.model.CommonResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
 package com.qsl.projectdemo.web.controller;
 
-import com.qsl.projectdemo.common.model.CommonResponse;
+import com.qsl.project.base.model.CommonResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Demo Controller层
  *
- * @author qianshuailong
- * @date 2021/8/3
+ * @author DanielQSL
  */
 @RequestMapping("/demo")
 @RestController

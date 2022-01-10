@@ -1,4 +1,4 @@
-package com.qsl.projectdemo.common.model;
+package com.qsl.project.base.model;
 
 import java.io.Serializable;
 import java.util.List;
