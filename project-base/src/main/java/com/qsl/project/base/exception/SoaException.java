@@ -5,7 +5,7 @@ package com.qsl.project.base.exception;
  *
  * @author DanielQSL
  */
-public class RpcException extends RuntimeException {
+public class SoaException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
@@ -13,7 +13,7 @@ public class RpcException extends RuntimeException {
 
     private final String errMsg;
 
-    public RpcException(Integer code, String msg) {
+    public SoaException(Integer code, String msg) {
         super(msg);
         this.errCode = code;
         this.errMsg = msg;
