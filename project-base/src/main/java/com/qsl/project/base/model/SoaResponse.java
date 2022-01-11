@@ -7,7 +7,7 @@ import java.io.Serializable;
  *
  * @author DanielQSL
  */
-public class RpcResponse<T, ErrT> implements Serializable {
+public class SoaResponse<T, ErrT> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -36,7 +36,7 @@ public class RpcResponse<T, ErrT> implements Serializable {
      */
     private ErrT errT;
 
-    public RpcResponse() {
+    public SoaResponse() {
     }
 
     public Integer getCode() {
