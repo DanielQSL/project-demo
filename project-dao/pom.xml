@@ -5,21 +5,21 @@
     <parent>
         <artifactId>project-demo</artifactId>
         <groupId>com.qsl.project</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>project-dao</artifactId>
 
     <properties>
-        <project-common.version>1.0-SNAPSHOT</project-common.version>
+
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.qsl.project</groupId>
             <artifactId>project-common</artifactId>
-            <version>${project-common.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
