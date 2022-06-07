@@ -22,7 +22,7 @@ public class HealthCheckController {
      *
      * @return 响应
      */
-    @RequestMapping(value = "/healthcheck", method = RequestMethod.GET)
+    @RequestMapping(value = "/healthCheck", method = RequestMethod.GET)
     public ResponseEntity<String> healthCheck() {
         return ResponseEntity.ok("OK");
     }

@@ -13,8 +13,3 @@ spring:
       connection-timeout: 60000
       connection-test-query: SELECT 1
       pool-name: SpringHikariPool
-
-# 开启sql日志控制台输出
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

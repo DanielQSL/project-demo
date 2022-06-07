@@ -1,5 +1,7 @@
 server:
   port: 9090
+  servlet:
+    context-path: /demo
   tomcat:
     threads:
       # 最大工作线程数，默认200, 4核8g内存，线程数经验值800

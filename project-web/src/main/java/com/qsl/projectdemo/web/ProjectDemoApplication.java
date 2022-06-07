@@ -1,6 +1,6 @@
 package com.qsl.projectdemo.web;
 
-import com.qsl.projectdemo.common.constants.ProjectConstant;
+import com.qsl.projectdemo.common.constants.ProjectConstants;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author DanielQSL
  */
-@SpringBootApplication(scanBasePackages = {ProjectConstant.BASE_PACKAGE})
+@SpringBootApplication(scanBasePackages = {ProjectConstants.BASE_PACKAGE})
 public class ProjectDemoApplication {
 
     public static void main(String[] args) {
