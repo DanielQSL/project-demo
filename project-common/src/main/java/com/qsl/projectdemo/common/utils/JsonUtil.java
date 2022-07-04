@@ -88,7 +88,7 @@ public class JsonUtil {
      */
     public static <T> String toJsonString(T obj) {
         if (obj == null) {
-            throw new NullPointerException();
+            return null;
         }
         try {
             return obj instanceof String ? (String) obj : OBJECT_MAPPER.writeValueAsString(obj);
@@ -105,7 +105,7 @@ public class JsonUtil {
      */
     public static <T> String toJsonStringPretty(T obj) {
         if (obj == null) {
-            throw new NullPointerException();
+            return null;
         }
         try {
             return obj instanceof String ? (String) obj : OBJECT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
@@ -123,7 +123,10 @@ public class JsonUtil {
      */
     @SuppressWarnings("unchecked")
     public static <T> T parseObject(String str, Class<T> clazz) {
-        if (StringUtils.isEmpty(str) || clazz == null) {
+        if (StringUtils.isEmpty(str)) {
+            return null;
+        }
+        if (clazz == null) {
             throw new NullPointerException();
         }
         try {
@@ -171,7 +174,10 @@ public class JsonUtil {
      */
     @SuppressWarnings("unchecked")
     public static <T> T parseObjectCollection(String str, TypeReference<T> typeReference) {
-        if (StringUtils.isEmpty(str) || typeReference == null) {
+        if (StringUtils.isEmpty(str)) {
+            return null;
+        }
+        if (typeReference == null) {
             throw new NullPointerException();
         }
         try {
