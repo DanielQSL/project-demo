@@ -13,17 +13,16 @@
     <groupId>com.qsl.project</groupId>
     <artifactId>project-demo</artifactId>
     <version>1.4.1</version>
-    <name>project-demo</name>
-    <description>模板项目的搭建</description>
     <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>模板项目的搭建</description>
 
     <modules>
         <module>project-base</module>
         <module>project-common</module>
-        <module>project-repository</module>
-        <module>project-service</module>
-        <module>project-web</module>
         <module>project-api</module>
+        <module>project-biz</module>
     </modules>
 
     <properties>

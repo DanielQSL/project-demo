@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>project-common</artifactId>
+    <name>${project.artifactId}</name>
+    <description>
+        common模块
+        定义基础 pojo 类、枚举、工具类等等
+    </description>
 
     <dependencies>
         <dependency>
@@ -58,15 +63,6 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-        </dependency>
-        <!--swagger2依赖-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
         </dependency>
         <!-- 参数校验 -->
         <dependency>
