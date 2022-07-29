@@ -12,7 +12,7 @@
 
     <groupId>com.qsl.project</groupId>
     <artifactId>project-demo</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
@@ -26,7 +26,7 @@
     </modules>
 
     <properties>
-        <revision>1.4.1</revision>
+        <revision>1.4.2</revision>
         <!--   项目基础     -->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,6 +48,26 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.qsl.project</groupId>
+                <artifactId>project-base</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qsl.project</groupId>
+                <artifactId>project-common</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qsl.project</groupId>
+                <artifactId>project-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qsl.project</groupId>
+                <artifactId>project-biz</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- 常用库依赖 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
