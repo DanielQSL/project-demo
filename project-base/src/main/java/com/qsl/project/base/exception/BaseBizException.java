@@ -30,12 +30,20 @@ public class BaseBizException extends RuntimeException {
         this(DEFAULT_ERROR_CODE, errorMsg);
     }
 
+    public BaseBizException(Integer errorCode, String errorMsg, Object... arguments) {
+        this(errorCode, String.format(errorMsg, arguments));
+    }
+
     public BaseBizException(BaseCommonError baseCommonError) {
         this(baseCommonError.getErrorCode(), baseCommonError.getErrorMsg());
     }
 
     public BaseBizException(BaseCommonError baseCommonError, String errorMsg) {
         this(baseCommonError.getErrorCode(), errorMsg);
+    }
+
+    public BaseBizException(BaseCommonError baseCommonError, Object... arguments) {
+        this(baseCommonError.getErrorCode(), String.format(baseCommonError.getErrorMsg(), arguments));
     }
 
     public Integer getErrorCode() {
