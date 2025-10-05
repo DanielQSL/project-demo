@@ -3,10 +3,11 @@
 
     <!-- 变量配置 -->
     <Properties>
+        <!-- 控制台日志颜色生效 启动项目时加上参数 -Dlog4j.skipJansi=false -->
         <property name="CONSOLE_LOG_PATTERN"
-                  value="%style{%d{ISO8601}}{bright,white} %highlight{%-5level} [%style{%t}{bright,blue}] [%style{%C{1.}}{bright,yellow}:%L] - %msg%n%style{%throwable}{red}"/>
+                  value="%style{%d{ISO8601}}{bright,white} %highlight{%-5level} [%style{%t}{bright,blue}] [%style{%C{1.}}{bright,yellow}:%L] %style{%X{trace_id}}{cyan} - %msg%n%style{%throwable}{red}"/>
         <property name="LOG_PATTERN"
-                  value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level [%logger{36}:%L] - %msg%xEx%n"/>
+                  value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level [%logger{36}:%L] %X{trace_id} - %msg%xEx%n"/>
         <property name="JSON_LOG_PATTERN">{"log_time":"%d{yyyy-MM-dd HH:mm:ss.SSS}","logType":"app_java","app_id":"${APP_NAME}","level":"%p","thread":"%t","trace_id":"%X{trace_id}","class_name":"%c","method_name":"%M","code_line":%L,"message":"%enc{%m %ex}{JSON}"}%n</property>
         <!-- 定义日志存储的路径 -->
         <property name="FILE_PATH" value="./log"/>

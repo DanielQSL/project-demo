@@ -10,7 +10,7 @@ public final class ProjectConstants {
     /**
      * 基础包名称
      */
-    public static final String BASE_PACKAGE = "com.qsl.project";
+    public static final String BASE_PACKAGE = "com.qsl";
 
     /**
      * 是否
