@@ -6,14 +6,14 @@
 
     <groupId>com.qsl.project</groupId>
     <artifactId>project-dependencies</artifactId>
-    <version>1.4.7</version>
+    <version>1.1.0</version>
     <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
     <description>基础 bom 文件，管理整个项目的依赖版本</description>
 
     <properties>
-        <revision>1.4.7</revision>
+        <revision>1.1.0</revision>
         <!-- Spring Boot依赖 -->
         <spring.boot.version>2.3.10.RELEASE</spring.boot.version>
         <!--   第三方依赖     -->
