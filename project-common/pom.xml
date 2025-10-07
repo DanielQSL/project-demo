@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>project-demo</artifactId>
         <groupId>com.qsl.project</groupId>
+        <artifactId>project-demo</artifactId>
         <version>${revision}</version>
     </parent>
 

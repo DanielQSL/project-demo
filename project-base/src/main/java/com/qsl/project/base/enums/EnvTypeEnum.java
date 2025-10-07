@@ -20,7 +20,7 @@ public enum EnvTypeEnum {
     /**
      * 预发布环境
      */
-    PL("pr"),
+    PL("pl1"),
 
     /**
      * 线上环境
