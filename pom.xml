@@ -21,8 +21,9 @@
 
         <!--   项目基础     -->
         <java.version>1.8</java.version>
-        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M9</maven-surefire-plugin.version>
+        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
     </properties>
 
     <modules>
@@ -83,6 +84,7 @@
         </pluginManagement>
 
        <plugins>
+           <!-- 代码编译插件 -->
            <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-compiler-plugin</artifactId>
@@ -118,6 +120,13 @@
                        </goals>
                    </execution>
                </executions>
+           </plugin>
+
+           <!-- 单元测试执行插件 -->
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-surefire-plugin</artifactId>
+               <version>${maven-surefire-plugin.version}</version>
            </plugin>
        </plugins>
     </build>
