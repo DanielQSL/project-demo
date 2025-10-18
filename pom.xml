@@ -127,6 +127,11 @@
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-surefire-plugin</artifactId>
                <version>${maven-surefire-plugin.version}</version>
+               <configuration>
+                   <!-- 并行运行测试类，提高测试执行速度 -->
+                   <parallel>classes</parallel>
+                   <threadCount>4</threadCount>
+               </configuration>
            </plugin>
        </plugins>
     </build>
