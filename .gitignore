@@ -33,16 +33,16 @@ build/
 ### VS Code ###
 .vscode/
 
-### 日志文件 ###
+### Log File ###
 *.log
 *.log.gz
 
 ### Temp File ###
-*.tmp
 target/
 /**/target/
+*.tmp
 *.cache
+*.class
 *.diff
 *.patch
-*.class
 /**/.flattened-pom.xml
