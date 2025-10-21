@@ -17,9 +17,9 @@
         <revision>1.1.5</revision>
 
         <!-- Spring Boot -->
-        <spring-boot.version>2.3.10.RELEASE</spring-boot.version>
+        <spring-boot.version>2.4.13</spring-boot.version>
 
-        <!--   项目基础     -->
+        <!-- 项目基础 -->
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
