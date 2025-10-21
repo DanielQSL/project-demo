@@ -98,6 +98,8 @@
                <configuration>
                    <source>${java.version}</source>
                    <target>${java.version}</target>
+                   <encoding>UTF-8</encoding>
+                   <parameters>true</parameters>
                </configuration>
            </plugin>
 
@@ -137,6 +139,8 @@
                    <!-- 并行运行测试类，提高测试执行速度 -->
                    <parallel>classes</parallel>
                    <threadCount>4</threadCount>
+                   <!-- 是否重用已创建的 JVM 进程 -->
+                   <reuseForks>false</reuseForks>
                </configuration>
            </plugin>
        </plugins>
