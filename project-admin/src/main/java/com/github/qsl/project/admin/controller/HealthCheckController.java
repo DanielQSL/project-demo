@@ -1,5 +1,6 @@
 package com.github.qsl.project.admin.controller;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author DanielQSL
  */
+@Hidden
 @Controller
 public class HealthCheckController {
 

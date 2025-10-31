@@ -18,7 +18,3 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-knife4j:
-  # 关闭增强配置
-  enable: false
