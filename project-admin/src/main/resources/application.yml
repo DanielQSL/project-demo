@@ -24,7 +24,6 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
 
-
 # knife4j的增强配置
 knife4j:
   enable: true
