@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.qsl.project</groupId>
+        <groupId>com.github.qsl</groupId>
         <artifactId>project-demo</artifactId>
         <version>${revision}</version>
     </parent>
@@ -16,18 +16,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.qsl.project</groupId>
+            <groupId>com.github.qsl</groupId>
             <artifactId>project-base</artifactId>
-        </dependency>
-        <!-- swagger2注释 -->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <optional>true</optional>
         </dependency>
         <!-- 参数校验 -->
         <dependency>
-            <groupId>org.hibernate</groupId>
+            <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <optional>true</optional>
         </dependency>

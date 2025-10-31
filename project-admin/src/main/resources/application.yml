@@ -1,0 +1,32 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /project-demo
+  tomcat:
+    threads:
+      max: 400
+      min-spare: 20
+    accept-count: 1000
+    max-connections: 20000
+  shutdown: graceful
+
+spring:
+  application:
+    name: project-demo
+  profiles:
+    active: dev
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+# knife4j的增强配置
+knife4j:
+  enable: true
+  # 标识是否生产环境：true-关闭文档，false-显示文档
+  production: true
