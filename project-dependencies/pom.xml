@@ -28,7 +28,7 @@
         <swagger.version>2.9.2</swagger.version>
         <swagger-annotations.version>1.5.22</swagger-annotations.version>
         <hibernate-validator.version>6.0.16.Final</hibernate-validator.version>
-        <knife4j.version>4.4.0</knife4j.version>
+        <springdoc-openapi.version>2.5.0</springdoc-openapi.version>
     </properties>
 
     <dependencyManagement>
@@ -89,11 +89,11 @@
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
             </dependency>
-            <!-- knife4j swagger2依赖 -->
+            <!-- OpenAPI 3（Swagger）文档 -->
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc-openapi.version}</version>
             </dependency>
 
             <!-- 参数校验 -->

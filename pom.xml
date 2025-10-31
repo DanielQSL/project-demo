@@ -17,7 +17,7 @@
         <revision>1.2.0</revision>
 
         <!-- Spring Boot -->
-        <spring-boot.version>3.0.13</spring-boot.version>
+        <spring-boot.version>3.2.12</spring-boot.version>
 
         <!-- 项目基础 -->
         <java.version>17</java.version>
