@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Demo Controller层
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Tag(name = "Demo接口")
 @RequestMapping("/demo")

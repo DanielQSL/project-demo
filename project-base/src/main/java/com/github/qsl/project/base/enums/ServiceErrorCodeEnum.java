@@ -19,7 +19,7 @@ import com.github.qsl.project.base.model.BaseCommonError;
  *       不限制规则。
  *       一般建议，每个模块从0001开始自增。
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public enum ServiceErrorCodeEnum implements BaseCommonError {
 

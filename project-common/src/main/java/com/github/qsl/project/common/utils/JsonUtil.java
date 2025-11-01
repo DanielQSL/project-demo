@@ -30,7 +30,7 @@ import java.util.TimeZone;
  * <p>
  * Jackson 配置官方文档: https://github.com/FasterXML/jackson-databind/wiki/JacksonFeatures
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class JsonUtil {
 

@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * Demo Mapper层
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Mapper
 public interface DemoMapper extends BaseMapper<DemoDO> {

@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 /**
  * 启动类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @SpringBootApplication(scanBasePackages = {ProjectConstants.BASE_PACKAGE})
 public class ProjectDemoApplication {

@@ -5,7 +5,7 @@ import com.github.qsl.project.base.model.BaseCommonError;
 /**
  * 自定义业务异常
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class BusinessException extends RuntimeException {
 

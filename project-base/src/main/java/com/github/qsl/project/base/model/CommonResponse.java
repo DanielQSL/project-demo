@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Web通用响应处理对象
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class CommonResponse<T> implements Serializable {
 

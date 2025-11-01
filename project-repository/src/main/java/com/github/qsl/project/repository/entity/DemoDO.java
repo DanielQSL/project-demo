@@ -10,13 +10,13 @@ import java.time.LocalDateTime;
 /**
  * Demo 实体对象
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Data
 @TableName("t_demo")
-public class DemoDO extends BaseDo {
+public class DemoDO extends BaseDO {
 
     /**
      * 用户名

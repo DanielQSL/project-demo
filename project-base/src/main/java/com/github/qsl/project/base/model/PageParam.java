@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 分页参数
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class PageParam implements Serializable {
 

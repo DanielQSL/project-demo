@@ -6,7 +6,7 @@ import com.github.qsl.project.base.model.BaseCommonError;
 /**
  * 项目异常类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class DemoException extends BaseBizException {
 

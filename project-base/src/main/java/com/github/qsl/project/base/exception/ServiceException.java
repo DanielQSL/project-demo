@@ -3,7 +3,7 @@ package com.github.qsl.project.base.exception;
 /**
  * 服务异常基类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class ServiceException extends RuntimeException {
 

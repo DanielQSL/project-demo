@@ -12,11 +12,11 @@ import java.time.LocalDateTime;
 /**
  * 基础DO
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Getter
 @Setter
-public class BaseDo {
+public class BaseDO {
 
     /**
      * 主键ID

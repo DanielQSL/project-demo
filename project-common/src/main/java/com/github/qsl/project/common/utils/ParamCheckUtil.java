@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * 参数校验工具类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class ParamCheckUtil {
 

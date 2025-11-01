@@ -7,8 +7,7 @@ import java.net.InetAddress;
 /**
  * 环境工具类
  *
- * @author shuailong.qian
- * @date 2022/1/10
+ * @author Daniel QIAN
  */
 public class EnvUtil {
 

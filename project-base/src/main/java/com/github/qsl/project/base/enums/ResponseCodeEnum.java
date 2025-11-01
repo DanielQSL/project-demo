@@ -10,7 +10,7 @@ import com.github.qsl.project.base.model.BaseCommonError;
  * <p>
  * 业务异常错误码 参见 {@link ServiceErrorCodeEnum}
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public enum ResponseCodeEnum implements BaseCommonError {
 

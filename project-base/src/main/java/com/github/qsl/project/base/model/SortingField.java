@@ -7,7 +7,7 @@ import java.io.Serializable;
  * <p>
  * 类名加了 ing 的原因是，避免和 ES SortField 重名。
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class SortingField implements Serializable {
 

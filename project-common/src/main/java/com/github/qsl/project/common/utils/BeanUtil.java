@@ -18,7 +18,7 @@ import java.util.function.Predicate;
 /**
  * Bean工具类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class BeanUtil {
 

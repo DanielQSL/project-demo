@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * 健康检测 Controller层
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Hidden
 @Controller

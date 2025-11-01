@@ -3,7 +3,7 @@ package com.github.qsl.project.base.exception;
 /**
  * RPC异常
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class SoaException extends RuntimeException {
 

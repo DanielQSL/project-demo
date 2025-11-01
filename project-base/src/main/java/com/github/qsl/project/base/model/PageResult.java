@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 分页结果集
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class PageResult<T> implements Serializable {
 

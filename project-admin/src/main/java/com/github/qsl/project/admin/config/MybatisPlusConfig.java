@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * MyBatis-Plus配置
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @MapperScan("com.github.qsl.project.repository.mapper")
 @Configuration

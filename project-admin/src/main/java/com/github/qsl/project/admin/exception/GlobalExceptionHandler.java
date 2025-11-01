@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 /**
  * 全局异常处理
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @SuppressWarnings({"rawtypes"})
 @Slf4j

@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * RPC通用响应处理对象
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class SoaResponse<T, ErrT> implements Serializable {
 

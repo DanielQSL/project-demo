@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Demo请求参数
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Data
 public class DemoReq implements Serializable {

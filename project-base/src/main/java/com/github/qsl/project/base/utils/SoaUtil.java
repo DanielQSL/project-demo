@@ -9,7 +9,7 @@ import com.github.qsl.project.base.model.SoaResponse;
 /**
  * RPC响应工具类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class SoaUtil {
 

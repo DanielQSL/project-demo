@@ -11,7 +11,7 @@ import java.util.Objects;
 /**
  * Spring应用上下文工具类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Slf4j
 @Component

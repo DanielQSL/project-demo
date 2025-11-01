@@ -3,7 +3,7 @@ package com.github.qsl.project.common.constants;
 /**
  * 项目常量
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public final class ProjectConstants {
 

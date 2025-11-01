@@ -3,7 +3,7 @@ package com.github.qsl.project.base.model;
 /**
  * 通用错误接口
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public interface BaseCommonError {
 

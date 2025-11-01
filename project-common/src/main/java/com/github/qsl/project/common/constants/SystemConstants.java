@@ -3,7 +3,7 @@ package com.github.qsl.project.common.constants;
 /**
  * 系统级常量
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public interface SystemConstants {
 

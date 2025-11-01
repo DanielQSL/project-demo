@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * 参数校验工具类
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public class ValidatorUtil {
 

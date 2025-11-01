@@ -26,7 +26,7 @@ import java.util.TimeZone;
 /**
  * WebMVC配置
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {

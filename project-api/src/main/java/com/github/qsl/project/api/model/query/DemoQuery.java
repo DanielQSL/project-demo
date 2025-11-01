@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * Demo查询参数
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 @Data
 public class DemoQuery {

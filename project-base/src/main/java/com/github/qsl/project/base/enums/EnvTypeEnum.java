@@ -3,7 +3,7 @@ package com.github.qsl.project.base.enums;
 /**
  * 环境类型枚举
  *
- * @author DanielQSL
+ * @author Daniel QIAN
  */
 public enum EnvTypeEnum {
 
