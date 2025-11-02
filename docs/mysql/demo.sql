@@ -1,10 +1,17 @@
+-- ------------------------------------------
+-- DATABASE structure for db_demo
+-- ------------------------------------------
 DROP
 DATABASE IF EXISTS `db_demo`;
 CREATE
-DATABASE  `db_demo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+DATABASE  `db_demo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE
 `db_demo`;
+
+-- ------------------------------------------
+-- Table structure for t_demo
+-- ------------------------------------------
 
 DROP TABLE IF EXISTS `t_demo`;
 CREATE TABLE `t_demo`
@@ -17,4 +24,4 @@ CREATE TABLE `t_demo`
     PRIMARY KEY (`id`),
     UNIQUE KEY `uk_username` (`username`) COMMENT '用户名唯一索引',
     INDEX         `idx_age` (`age`)  COMMENT '年龄索引'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='示例表';
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '示例表';

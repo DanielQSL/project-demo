@@ -2,8 +2,7 @@ package com.github.qsl.project.repository.dao;
 
 import com.github.qsl.project.repository.entity.DemoDO;
 import com.github.qsl.project.repository.mapper.DemoMapper;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -11,11 +10,10 @@ import org.springframework.stereotype.Repository;
  *
  * @author Daniel QIAN
  */
-@Slf4j
 @Repository
 public class DemoDAO extends BaseDAO<DemoMapper, DemoDO> {
 
-    @Autowired
+    @Resource
     private DemoMapper demoMapper;
 
 }
