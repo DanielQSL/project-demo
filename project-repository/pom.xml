@@ -11,8 +11,7 @@
     <artifactId>project-repository</artifactId>
 
     <description>
-        common模块
-        定义基础 pojo 类、枚举、工具类等等
+        数据操作 模块
     </description>
 
     <dependencies>
