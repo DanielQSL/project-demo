@@ -37,17 +37,17 @@ public interface SystemConstants {
      */
     String[] STATIC_WITHE_PATH_LIST = new String[]{
             "/",
+            "/static/**",
             "/js/**",
             "/css/**",
-            "/img/**",
             "/fonts/**",
+            "/img/**",
             "/index.html",
             "/favicon.ico",
             "/webjars/**",
-            "/doc.html",
             "/swagger-ui.html",
             "/swagger-resources/**",
-            "/v3/**"
+            "/v3/api-docs"
     };
 
     /**

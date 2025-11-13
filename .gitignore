@@ -7,6 +7,9 @@
 *.tar.gz
 *.rar
 
+### Compiled class file ###
+.class
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -42,7 +45,6 @@ target/
 /**/target/
 *.tmp
 *.cache
-*.class
 *.diff
 *.patch
 /**/.flattened-pom.xml
