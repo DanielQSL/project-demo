@@ -1,6 +1,6 @@
 package com.github.qsl.project.base.utils;
 
-import com.github.qsl.project.base.enums.EnvTypeEnum;
+import com.github.qsl.project.base.enums.EnvType;
 
 import java.net.InetAddress;
 
@@ -54,19 +54,19 @@ public class EnvUtil {
 
         if (hostname != null) {
             if (hostname.contains("-dev-")) {
-                return EnvTypeEnum.DEV.getDesc();
+                return EnvType.DEV.getDesc();
             }
             if (hostname.contains("-qa-")) {
-                return EnvTypeEnum.QA.getDesc();
+                return EnvType.QA.getDesc();
             }
             if (hostname.contains("-pl-")) {
-                return EnvTypeEnum.PL.getDesc();
+                return EnvType.PL.getDesc();
             }
             if (hostname.contains("-online-")) {
-                return EnvTypeEnum.ONLINE.getDesc();
+                return EnvType.ONLINE.getDesc();
             }
         }
-        return EnvTypeEnum.DEV.getDesc();
+        return EnvType.DEV.getDesc();
     }
 
 }

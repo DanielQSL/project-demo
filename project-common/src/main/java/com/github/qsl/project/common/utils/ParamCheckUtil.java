@@ -1,6 +1,6 @@
 package com.github.qsl.project.common.utils;
 
-import com.github.qsl.project.base.enums.ResponseCodeEnum;
+import com.github.qsl.project.base.enums.ResponseCode;
 import com.github.qsl.project.base.exception.BaseBizException;
 import com.github.qsl.project.base.model.BaseCommonError;
 import org.apache.commons.collections4.CollectionUtils;
@@ -18,13 +18,13 @@ public class ParamCheckUtil {
 
     public static void checkObjectNotNull(Object o) throws BaseBizException {
         if (Objects.isNull(o)) {
-            throw new BaseBizException(ResponseCodeEnum.SERVER_ILLEGAL_ARGUMENT_ERROR);
+            throw new BaseBizException(ResponseCode.SERVER_ILLEGAL_ARGUMENT_ERROR);
         }
     }
 
     public static void checkObjectNotNull(Object o, String errorMsg) throws BaseBizException {
         if (Objects.isNull(o)) {
-            throw new BaseBizException(ResponseCodeEnum.SERVER_ILLEGAL_ARGUMENT_ERROR, errorMsg);
+            throw new BaseBizException(ResponseCode.SERVER_ILLEGAL_ARGUMENT_ERROR, errorMsg);
         }
     }
 
@@ -36,13 +36,13 @@ public class ParamCheckUtil {
 
     public static void checkStringNotBlank(String str) throws BaseBizException {
         if (StringUtils.isBlank(str)) {
-            throw new BaseBizException(ResponseCodeEnum.SERVER_ILLEGAL_ARGUMENT_ERROR);
+            throw new BaseBizException(ResponseCode.SERVER_ILLEGAL_ARGUMENT_ERROR);
         }
     }
 
     public static void checkStringNotBlank(String str, String errorMsg) throws BaseBizException {
         if (StringUtils.isBlank(str)) {
-            throw new BaseBizException(ResponseCodeEnum.SERVER_ILLEGAL_ARGUMENT_ERROR, errorMsg);
+            throw new BaseBizException(ResponseCode.SERVER_ILLEGAL_ARGUMENT_ERROR, errorMsg);
         }
     }
 
@@ -54,13 +54,13 @@ public class ParamCheckUtil {
 
     public static void checkCollectionNotEmpty(Collection<?> collection) throws BaseBizException {
         if (CollectionUtils.isEmpty(collection)) {
-            throw new BaseBizException(ResponseCodeEnum.SERVER_ILLEGAL_ARGUMENT_ERROR);
+            throw new BaseBizException(ResponseCode.SERVER_ILLEGAL_ARGUMENT_ERROR);
         }
     }
 
     public static void checkCollectionNotEmpty(Collection<?> collection, String errorMsg) throws BaseBizException {
         if (CollectionUtils.isEmpty(collection)) {
-            throw new BaseBizException(ResponseCodeEnum.SERVER_ILLEGAL_ARGUMENT_ERROR, errorMsg);
+            throw new BaseBizException(ResponseCode.SERVER_ILLEGAL_ARGUMENT_ERROR, errorMsg);
         }
     }
 

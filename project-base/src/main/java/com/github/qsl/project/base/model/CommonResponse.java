@@ -1,6 +1,6 @@
 package com.github.qsl.project.base.model;
 
-import com.github.qsl.project.base.enums.ResponseCodeEnum;
+import com.github.qsl.project.base.enums.ResponseCode;
 
 import java.io.Serializable;
 
@@ -44,27 +44,27 @@ public class CommonResponse<T> implements Serializable {
     }
 
     public static <T> CommonResponse<T> success() {
-        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), ResponseCodeEnum.SUCCESS.getMsg());
+        return new CommonResponse<>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMsg());
     }
 
     public static <T> CommonResponse<T> success(T data) {
-        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), ResponseCodeEnum.SUCCESS.getMsg(), data);
+        return new CommonResponse<>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getMsg(), data);
     }
 
     public static <T> CommonResponse<T> successMsg(String message) {
-        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), message);
+        return new CommonResponse<>(ResponseCode.SUCCESS.getCode(), message);
     }
 
     public static <T> CommonResponse<T> success(String message, T data) {
-        return new CommonResponse<>(ResponseCodeEnum.SUCCESS.getCode(), message, data);
+        return new CommonResponse<>(ResponseCode.SUCCESS.getCode(), message, data);
     }
 
     public static <T> CommonResponse<T> fail() {
-        return new CommonResponse<>(ResponseCodeEnum.ERROR.getCode(), ResponseCodeEnum.ERROR.getMsg());
+        return new CommonResponse<>(ResponseCode.ERROR.getCode(), ResponseCode.ERROR.getMsg());
     }
 
     public static <T> CommonResponse<T> fail(String errorMessage) {
-        return new CommonResponse<>(ResponseCodeEnum.ERROR.getCode(), errorMessage);
+        return new CommonResponse<>(ResponseCode.ERROR.getCode(), errorMessage);
     }
 
     public static <T> CommonResponse<T> fail(int errorCode, String errorMessage) {

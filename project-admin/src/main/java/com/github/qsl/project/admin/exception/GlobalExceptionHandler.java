@@ -1,6 +1,6 @@
 package com.github.qsl.project.admin.exception;
 
-import com.github.qsl.project.base.enums.ResponseCodeEnum;
+import com.github.qsl.project.base.enums.ResponseCode;
 import com.github.qsl.project.base.exception.BusinessException;
 import com.github.qsl.project.base.model.CommonResponse;
 import jakarta.servlet.http.HttpServletRequest;
@@ -43,7 +43,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = HttpRequestMethodNotSupportedException.class)
     public CommonResponse<Object> handle(HttpRequestMethodNotSupportedException ex) {
-        return CommonResponse.fail(ResponseCodeEnum.CLIENT_HTTP_METHOD_ERROR);
+        return CommonResponse.fail(ResponseCode.CLIENT_HTTP_METHOD_ERROR);
     }
 
     /**
@@ -56,7 +56,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BindException.class)
     public CommonResponse handle(BindException ex) {
         String errorMsg = ex.getBindingResult().getAllErrors().stream().map(DefaultMessageSourceResolvable::getDefaultMessage).collect(Collectors.joining(";"));
-        return CommonResponse.fail(ResponseCodeEnum.CLIENT_PATH_VARIABLE_ERROR, errorMsg);
+        return CommonResponse.fail(ResponseCode.CLIENT_PATH_VARIABLE_ERROR, errorMsg);
     }
 
     /**
@@ -69,7 +69,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ConstraintViolationException.class)
     public CommonResponse handle(ConstraintViolationException ex) {
         String errorMsg = ex.getConstraintViolations().stream().map(ConstraintViolation::getMessage).collect(Collectors.joining(";"));
-        return CommonResponse.fail(ResponseCodeEnum.CLIENT_REQUEST_PARAM_CHECK_ERROR, errorMsg);
+        return CommonResponse.fail(ResponseCode.CLIENT_REQUEST_PARAM_CHECK_ERROR, errorMsg);
     }
 
     /**
@@ -82,7 +82,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public CommonResponse handle(MethodArgumentNotValidException ex) {
         String errorMsg = ex.getBindingResult().getAllErrors().stream().map(DefaultMessageSourceResolvable::getDefaultMessage).collect(Collectors.joining(";"));
-        return CommonResponse.fail(ResponseCodeEnum.CLIENT_REQUEST_BODY_CHECK_ERROR, errorMsg);
+        return CommonResponse.fail(ResponseCode.CLIENT_REQUEST_BODY_CHECK_ERROR, errorMsg);
     }
 
     /**
@@ -99,9 +99,9 @@ public class GlobalExceptionHandler {
             errorMsg = String.format("参数[%s]不能为空", ex.getParameterName());
         }
         if (errorMsg != null) {
-            return CommonResponse.fail(ResponseCodeEnum.CLIENT_REQUEST_PARAM_REQUIRED_ERROR, errorMsg);
+            return CommonResponse.fail(ResponseCode.CLIENT_REQUEST_PARAM_REQUIRED_ERROR, errorMsg);
         }
-        return CommonResponse.fail(ResponseCodeEnum.CLIENT_REQUEST_PARAM_REQUIRED_ERROR);
+        return CommonResponse.fail(ResponseCode.CLIENT_REQUEST_PARAM_REQUIRED_ERROR);
     }
 
     // =========== 服务端业务异常 =========
@@ -133,7 +133,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public CommonResponse handle(HttpServletRequest request, final Exception ex) {
         log.error("{} 系统异常", request.getRequestURI(), ex);
-        return CommonResponse.fail(ResponseCodeEnum.INTERNAL_SERVER_ERROR, ex.getMessage());
+        return CommonResponse.fail(ResponseCode.INTERNAL_SERVER_ERROR, ex.getMessage());
     }
 
 }

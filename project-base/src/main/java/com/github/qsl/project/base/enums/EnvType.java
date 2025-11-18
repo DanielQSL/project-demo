@@ -5,7 +5,7 @@ package com.github.qsl.project.base.enums;
  *
  * @author Daniel QIAN
  */
-public enum EnvTypeEnum {
+public enum EnvType {
 
     /**
      * 开发环境
@@ -30,7 +30,7 @@ public enum EnvTypeEnum {
 
     private final String desc;
 
-    EnvTypeEnum(String desc) {
+    EnvType(String desc) {
         this.desc = desc;
     }
 

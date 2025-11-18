@@ -8,11 +8,11 @@ import com.github.qsl.project.base.model.BaseCommonError;
  * 一般情况下，使用 HTTP 响应状态码 https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status
  * 虽然说，HTTP 响应状态码作为业务使用表达能力偏弱，但是使用在系统层面还是非常不错的
  * <p>
- * 业务异常错误码 参见 {@link ServiceErrorCodeEnum}
+ * 业务异常错误码 参见 {@link ServiceErrorCode}
  *
  * @author Daniel QIAN
  */
-public enum ResponseCodeEnum implements BaseCommonError {
+public enum ResponseCode implements BaseCommonError {
 
     /**
      * 成功响应码
@@ -148,7 +148,7 @@ public enum ResponseCodeEnum implements BaseCommonError {
 
     private final String msg;
 
-    ResponseCodeEnum(Integer code, String msg) {
+    ResponseCode(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

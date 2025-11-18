@@ -1,6 +1,6 @@
 package com.github.qsl.project.base.utils;
 
-import com.github.qsl.project.base.enums.ResponseCodeEnum;
+import com.github.qsl.project.base.enums.ResponseCode;
 import com.github.qsl.project.base.exception.BusinessException;
 import com.github.qsl.project.base.exception.SoaException;
 import com.github.qsl.project.base.model.BaseCommonError;
@@ -13,11 +13,11 @@ import com.github.qsl.project.base.model.SoaResponse;
  */
 public class SoaUtil {
 
-    private final static Integer SUCCESS_CODE = ResponseCodeEnum.SUCCESS.getErrorCode();
-    private final static String SUCCESS_MESSAGE = ResponseCodeEnum.SUCCESS.getErrorMsg();
+    private final static Integer SUCCESS_CODE = ResponseCode.SUCCESS.getErrorCode();
+    private final static String SUCCESS_MESSAGE = ResponseCode.SUCCESS.getErrorMsg();
 
-    private final static Integer ERROR_CODE = ResponseCodeEnum.ERROR.getErrorCode();
-    private final static String ERROR_MESSAGE = ResponseCodeEnum.ERROR.getErrorMsg();
+    private final static Integer ERROR_CODE = ResponseCode.ERROR.getErrorCode();
+    private final static String ERROR_MESSAGE = ResponseCode.ERROR.getErrorMsg();
 
     public static <T, E> SoaResponse<T, E> success(String returnMsg, T data) {
         SoaResponse<T, E> soaResponse = new SoaResponse<>();
@@ -85,7 +85,7 @@ public class SoaUtil {
 
     public static <T> T unpack(SoaResponse<T, ?> soaResponse) {
         if (null == soaResponse) {
-            throw new SoaException(ResponseCodeEnum.RPC_RETURN_NULL.getErrorCode(), ResponseCodeEnum.RPC_RETURN_NULL.getErrorMsg());
+            throw new SoaException(ResponseCode.RPC_RETURN_NULL.getErrorCode(), ResponseCode.RPC_RETURN_NULL.getErrorMsg());
         }
         if (!SUCCESS_CODE.equals(soaResponse.getCode())) {
             throw new SoaException(soaResponse.getCode(), soaResponse.getMsg());
@@ -95,13 +95,13 @@ public class SoaUtil {
 
     public static <T> T unpackNotNull(SoaResponse<T, ?> soaResponse) {
         if (null == soaResponse) {
-            throw new SoaException(ResponseCodeEnum.RPC_RETURN_NULL.getErrorCode(), ResponseCodeEnum.RPC_RETURN_NULL.getErrorMsg());
+            throw new SoaException(ResponseCode.RPC_RETURN_NULL.getErrorCode(), ResponseCode.RPC_RETURN_NULL.getErrorMsg());
         }
         if (!SUCCESS_CODE.equals(soaResponse.getCode())) {
             throw new SoaException(soaResponse.getCode(), soaResponse.getMsg());
         }
         if (null == soaResponse.getData()) {
-            throw new SoaException(ResponseCodeEnum.RPC_RETURN_DATA_NULL.getErrorCode(), ResponseCodeEnum.RPC_RETURN_DATA_NULL.getErrorMsg());
+            throw new SoaException(ResponseCode.RPC_RETURN_DATA_NULL.getErrorCode(), ResponseCode.RPC_RETURN_DATA_NULL.getErrorMsg());
         }
         return soaResponse.getData();
     }

@@ -21,7 +21,7 @@ import com.github.qsl.project.base.model.BaseCommonError;
  *
  * @author Daniel QIAN
  */
-public enum ServiceErrorCodeEnum implements BaseCommonError {
+public enum ServiceErrorCode implements BaseCommonError {
 
     // ========== user 错误码区间 [101_00_0000 ~ 102_00_0000) ==========
     USER_QUERY_EMPTY(101_02_0001, "未查询到用户"),
@@ -32,7 +32,7 @@ public enum ServiceErrorCodeEnum implements BaseCommonError {
 
     private final String msg;
 
-    ServiceErrorCodeEnum(Integer code, String msg) {
+    ServiceErrorCode(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
