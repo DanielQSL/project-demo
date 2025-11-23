@@ -2,9 +2,8 @@ package com.github.qsl.project.admin.controller;
 
 import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 健康检测 Controller层
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Daniel QIAN
  */
 @Hidden
-@Controller
+@RestController
 public class HealthCheckController {
 
     /**
@@ -22,7 +21,7 @@ public class HealthCheckController {
      *
      * @return 响应
      */
-    @RequestMapping(value = "/health", method = RequestMethod.GET)
+    @GetMapping("/health")
     public ResponseEntity<String> healthCheck() {
         return ResponseEntity.ok("OK");
     }
