@@ -77,62 +77,71 @@
                             </goals>
                         </execution>
                     </executions>
+                    <configuration>
+                        <excludes>
+                            <!-- 排除 lombok 依赖可以减少最终打包的大小 -->
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
 
-       <plugins>
-           <!-- 代码编译插件 -->
-           <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>${maven-compiler-plugin.version}</version>
-               <configuration>
-                   <source>${java.version}</source>
-                   <target>${java.version}</target>
-                   <encoding>UTF-8</encoding>
-                   <parameters>true</parameters>
-               </configuration>
-           </plugin>
+        <plugins>
+            <!-- 代码编译插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                    <parameters>true</parameters>
+                </configuration>
+            </plugin>
 
-           <!-- 控制版本号插件 -->
-           <plugin>
-               <groupId>org.codehaus.mojo</groupId>
-               <artifactId>flatten-maven-plugin</artifactId>
-               <version>${flatten-maven-plugin.version}</version>
-               <configuration>
-                   <updatePomFile>true</updatePomFile>
-                   <flattenMode>resolveCiFriendliesOnly</flattenMode>
-               </configuration>
-               <executions>
-                   <execution>
-                       <id>flatten</id>
-                       <phase>process-resources</phase>
-                       <goals>
-                           <goal>flatten</goal>
-                       </goals>
-                   </execution>
-                   <execution>
-                       <id>flatten.clean</id>
-                       <phase>clean</phase>
-                       <goals>
-                           <goal>clean</goal>
-                       </goals>
-                   </execution>
-               </executions>
-           </plugin>
+            <!-- 控制版本号插件 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-           <!-- 单元测试执行插件 -->
-           <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-surefire-plugin</artifactId>
-               <version>${maven-surefire-plugin.version}</version>
-               <configuration>
-                   <parallel>classes</parallel>
-                   <threadCount>2</threadCount>
-               </configuration>
-           </plugin>
-       </plugins>
+            <!-- 单元测试执行插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <parallel>classes</parallel>
+                    <threadCount>2</threadCount>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
